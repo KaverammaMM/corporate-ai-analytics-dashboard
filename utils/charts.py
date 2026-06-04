@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 # =========================
 # AI Adoption Trend
 # =========================
-def ai_adoption_trend(df):
+from utils.charts import adoption_trend
     trend = df.groupby("year")["ai_adoption_level"].mean().reset_index()
 
     fig = px.line(
